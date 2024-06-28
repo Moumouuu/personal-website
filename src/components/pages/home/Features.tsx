@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -100,20 +102,48 @@ const Pentagon = () => {
 };
 
 export default function Features() {
-  const icons = [Star, Star2, Star3, Star4, Plus, Pentagon];
+  const icons = [Star, Star2, Star3, Star4, Plus, Pentagon, Star, Star2];
 
-  const feature = {
-    title: "Feature",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.",
-  };
-
-  const features = Array.from({ length: 6 }, () => ({ ...feature }));
+  const features = [
+    {
+      title: "Développement sur mesure",
+      text: "Le développement est entièrement personnalisé pour répondre à vos besoins. Nous utilisons les dernières technologies pour garantir un site rapide et performant.",
+    },
+    {
+      title: "Des développeurs à votre service !",
+      text: "Nous sommes des développeurs qui avont suivis une formation en développement web et nous sommes passionnés par notre métier. Nous mettons notre expertise à votre service pour vous accompagner dans la création de votre site internet. C'est pourquoi il n'y a pas de limite à ce que nous pouvons faire pour vous !",
+    },
+    {
+      title: "Design moderne et épuré",
+      text: "Un design moderne et épuré pour mettre en valeur votre contenu et offrir une expérience utilisateur optimale.",
+    },
+    {
+      title: "Optimisé pour le SEO",
+      text: "Le site est optimisé pour le référencement naturel pour améliorer sa visibilité sur les moteurs de recherche.",
+    },
+    {
+      title: "Adapté à tous les écrans",
+      text: "Le site est responsive et s'adapte à tous les écrans pour offrir une expérience utilisateur optimale sur mobile",
+    },
+    {
+      title: "Sécurisé et fiable",
+      text: "Le site est sécurisé et fiable pour protéger vos données et celles de vos utilisateurs.",
+    },
+    {
+      title: "Rapide et performant",
+      text: "Le site est rapide et performant pour offrir une expérience utilisateur optimale et augmenter le taux de conversion.",
+    },
+    {
+      title: "Support technique",
+      text: "Nous vous accompagnons après la mise en ligne pour répondre à vos questions et vous aider à gérer votre site.",
+    },
+  ];
 
   return (
     <div>
       <section className="border-t-darkBorder bg-darkBg border-t py-20 font-base lg:py-[100px]">
         <h2 className="mb-14 px-5 text-center text-2xl font-heading md:text-3xl lg:mb-20 lg:text-4xl text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing
+          Notre expertise et nos engagements
         </h2>
 
         <div className="mx-auto grid w-container max-w-full grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -130,15 +160,13 @@ export default function Features() {
               >
                 <Icon />
 
-                <h4 className="mt-2 text-xl font-heading">
-                  {feature.title} {i + 1}
-                </h4>
+                <h4 className="mt-2 text-xl font-heading">{feature.title}</h4>
                 <p>{feature.text}</p>
               </div>
             );
           })}
         </div>
-        <Button className="mx-auto mt-14">Get Started</Button>
+        <Button className="mx-auto mt-14">Demander un devis</Button>
       </section>
     </div>
   );
