@@ -16,7 +16,7 @@ export default function Reviews() {
         <h2 className="mb-14 text-center text-2xl font-heading md:text-3xl lg:mb-20 lg:text-4xl text-white">
           Nos clients satisfaits
         </h2>
-        <div className="grid grid-cols-3 gap-4 lg:gap-8 w900:grid-cols-1 w900:gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 w900:grid-cols-1 w900:gap-0">
           {[
             [review(), review()],
             [review(), review(), review()],
