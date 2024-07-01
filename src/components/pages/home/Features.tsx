@@ -3,7 +3,7 @@
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-const Star = () => {
+export const Star = () => {
   return (
     <svg
       className="h-12 w-12"
@@ -18,7 +18,7 @@ const Star = () => {
   );
 };
 
-const Star2 = () => {
+export const Star2 = () => {
   return (
     <svg
       className="h-12 w-12"
@@ -36,7 +36,7 @@ const Star2 = () => {
   );
 };
 
-const Star3 = () => {
+export const Star3 = () => {
   return (
     <svg
       className="h-12 w-12"
@@ -52,7 +52,7 @@ const Star3 = () => {
   );
 };
 
-const Star4 = () => {
+export const Star4 = () => {
   return (
     <svg
       className="h-12 w-12"
@@ -69,7 +69,7 @@ const Star4 = () => {
   );
 };
 
-const Plus = () => {
+export const Plus = () => {
   return (
     <svg
       className="h-12 w-12"
@@ -85,7 +85,7 @@ const Plus = () => {
   );
 };
 
-const Pentagon = () => {
+export const Pentagon = () => {
   return (
     <svg
       className="h-12 w-12"
