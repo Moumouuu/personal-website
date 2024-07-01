@@ -1,6 +1,7 @@
 import Navigation from "@/components/pages/Navigation";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,11 @@ export default function RootLayout({
         <Navigation />
         {children}
       </body>
+      <Script
+        async
+        src="https://umami-yck480o.5.75.226.51.sslip.io/script.js"
+        data-website-id="3d2cdafc-ae12-4ff9-8cd5-d8bbd4f4acb7"
+      />
     </html>
   );
 }
