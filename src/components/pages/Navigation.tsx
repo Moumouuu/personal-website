@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../ui/Button";
 import Drawer from "../ui/Drawer";
 
@@ -28,11 +28,14 @@ export default function Navigation() {
     console.log("Mouse enter", link);
   };
 
-  // if user press escape key, close the drawer
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      setIsDrawerActive(false);
-    }
+  useEffect(() => {
+    // Client-side-only code
+    // if user press escape key, close the drawer
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        setIsDrawerActive(false);
+      }
+    });
   });
 
   return (
