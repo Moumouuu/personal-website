@@ -19,7 +19,7 @@ const Star3 = () => {
 export default function Faq() {
   return (
     <div>
-      <section className=" dark:bg-darkBg bg-bg py-20 font-base lg:py-[100px]">
+      <section className="bg-darkBg py-20 font-base lg:py-[100px]">
         <h2 className="mb-14 px-5 text-center text-2xl font-heading md:text-3xl lg:mb-20 lg:text-4xl text-white">
           Question fréquemment posées
         </h2>

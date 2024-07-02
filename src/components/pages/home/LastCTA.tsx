@@ -1,4 +1,4 @@
-import ButtonEstimate from "../ButtonEstimate";
+import ButtonEstimate from "@/components/ButtonEstimate";
 
 export default function LastCTA() {
   return (

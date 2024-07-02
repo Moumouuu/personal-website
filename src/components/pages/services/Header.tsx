@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
-import { Star2, Star3 } from "./Features";
 import ButtonEstimate from "@/components/ButtonEstimate";
+import { motion } from "framer-motion";
+import { Star2, Star3 } from "../home/Features";
 
 export default function Header() {
   return (
@@ -13,7 +13,7 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Votre agence web à Mulhouse
+          Nos services de développement web à Mulhouse
         </motion.h1>
         <motion.p
           className="my-12 mt-8 text-lg font-normal leading-relaxed md:text-xl lg:text-2xl lg:leading-relaxed"
@@ -21,9 +21,8 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Développement de sites web sur mesure, optimisés pour le SEO et
-          adaptés à tous les écrans <br /> pour les entreprises et les
-          particuliers à Mulhouse.
+          Développement de sites web sur mesure, application web complète <br />{" "}
+          pour les entreprises et les particuliers à Mulhouse.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

@@ -2,8 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
-import Button from "../ui/Button";
-import Drawer from "../ui/Drawer";
+import Button from "./ui/Button";
+import Drawer from "./ui/Drawer";
 
 interface Link {
   href: string;
@@ -13,10 +13,10 @@ interface Link {
 
 export default function Navigation() {
   const links = [
-    { href: "#", text: "Accueil", image: "/images/accueil.jpeg" },
-    { href: "#", text: "Services", image: "/images/services.webp" },
-    { href: "#", text: "Notre histoire", image: "/images/story.webp" },
-    { href: "#", text: "Portfolio", image: "/images/portfolio.webp" },
+    { href: "/", text: "Accueil", image: "/images/accueil.jpeg" },
+    { href: "/services", text: "Services", image: "/images/services.webp" },
+    { href: "/story", text: "Notre histoire", image: "/images/story.webp" },
+    { href: "/portfolio", text: "Portfolio", image: "/images/portfolio.webp" },
   ];
   const [isDrawerActive, setIsDrawerActive] = useState(false);
   const [activeLink, setActiveLink] = useState(links[0]);
@@ -56,7 +56,7 @@ export default function Navigation() {
                 <a
                   key={index}
                   className="w-full uppercase text-white px-5 py-4 text-3xl font-bold "
-                  href="#"
+                  href={link.href}
                   onMouseEnter={() => handleMouseEnter(link)}
                 >
                   {link.text}

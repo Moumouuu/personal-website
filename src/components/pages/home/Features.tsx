@@ -1,7 +1,7 @@
 "use client";
 
+import ButtonEstimate from "@/components/ButtonEstimate";
 import { cn } from "@/lib/utils";
-import ButtonEstimate from "../ButtonEstimate";
 
 export const Star = () => {
   return (
@@ -160,7 +160,7 @@ export default function Features() {
             return (
               <div
                 className={cn(
-                  i % 2 === 0 ? "bg-darkBg" : "bg-main",
+                  i % 3 === 0 ? "bg-darkBg" : "bg-main",
                   gridClass,
                   "text-white border-darkBorder shadow-light dark:shadow-dark flex flex-col gap-3 rounded-base border-2 p-5"
                 )}
@@ -168,7 +168,7 @@ export default function Features() {
               >
                 <Icon />
                 <h4 className="mt-2 text-xl font-heading">{feature.title}</h4>
-                <p>{feature.text}</p>
+                <p className="text-lg">{feature.text}</p>
               </div>
             );
           })}

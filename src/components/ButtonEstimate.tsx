@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Button from "../ui/Button";
-import Checkbox from "../ui/Checkbox";
-import Modal from "../ui/Modal";
+import Button from "./ui/Button";
+import Checkbox from "./ui/Checkbox";
+import Modal from "./ui/Modal";
 
 export default function ButtonEstimate() {
   const [isModalActive, setIsModalActive] = useState(false);
