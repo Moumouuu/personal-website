@@ -1,4 +1,4 @@
-import Button from "@/components/ui/Button";
+import ButtonEstimate from "../ButtonEstimate";
 
 export default function LastCTA() {
   return (
@@ -11,9 +11,7 @@ export default function LastCTA() {
           Contactez-moi pour discuter de votre projet et obtenir un devis
           personnalisé.
         </p>
-        <Button className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl">
-          Demander un devis
-        </Button>
+        <ButtonEstimate />
       </div>
     </header>
   );

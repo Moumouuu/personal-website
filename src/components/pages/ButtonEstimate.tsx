@@ -71,26 +71,36 @@ function ModalContent() {
 
   return (
     <div>
-      <h1 className="text-xl text-center font-semibold">Simulateur de devis</h1>
-      <p className="my-4 text-center text-sm">
+      <h1 className="text-xl md:text-2xl text-center font-semibold">
+        Simulateur de devis
+      </h1>
+      <p className="my-2 text-center text-sm">
         Choisissez les options qui vous intéressent pour obtenir une estimation
         de prix. Si vous avez des questions, n&apos;hésitez pas à me contacter.
       </p>
 
       <div className="flex flex-col text-left">
-        <p className="text-lg font-semibold">Prix total : {price}</p>
-        <p className="text-lg font-semibold">
-          À payer chaque année : {annualSubscription}
-        </p>
+        <div className="my-2">
+          <p className="text-lg font-semibold">Prix total : {price}</p>
+          <p className="text-lg font-semibold">
+            À payer chaque année : {annualSubscription}
+          </p>
+        </div>
 
-        <label htmlFor="numberOfPages">Nombre de pages : {numberOfPages}</label>
-        <input
-          type="range"
-          min={defaultNumberOfPages}
-          max={maxNumberOfPages}
-          value={numberOfPages}
-          onChange={(e) => handleNumberOfPagesChange(parseInt(e.target.value))}
-        />
+        <div className="my-2 flex flex-col">
+          <label htmlFor="numberOfPages">
+            Nombre de pages : {numberOfPages}
+          </label>
+          <input
+            type="range"
+            min={defaultNumberOfPages}
+            max={maxNumberOfPages}
+            value={numberOfPages}
+            onChange={(e) =>
+              handleNumberOfPagesChange(parseInt(e.target.value))
+            }
+          />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Checkbox

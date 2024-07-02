@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import ButtonEstimate from "../ButtonEstimate";
 
 export const Star = () => {
   return (
@@ -173,9 +173,9 @@ export default function Features() {
             );
           })}
         </div>
-        <Button className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl mx-auto">
-          Demander un devis
-        </Button>
+        <div className="flex justify-center">
+          <ButtonEstimate />
+        </div>
       </section>
     </div>
   );
