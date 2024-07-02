@@ -1,4 +1,4 @@
-import Button from "@/components/ui/Button";
+import ButtonEstimate from "../ButtonEstimate";
 import { Star2, Star3 } from "./Features";
 
 export default function Header() {
@@ -13,9 +13,7 @@ export default function Header() {
           adaptés à tous les écrans pour les entreprises et les particuliers à
           Mulhouse.
         </p>
-        <Button className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl">
-          Demander un devis
-        </Button>
+        <ButtonEstimate />
       </div>
       <div className="absolute bottom-10 left-8 lg:bottom-20 lg:left-32 w-20 h-20 ">
         <Star3 />
