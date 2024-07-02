@@ -9,6 +9,7 @@ export default function Projects() {
         "Une plateforme de génération de fiches de révision pour tous les étudiants en quelques clics. Avec plus de 4000 utilisateurs et 3000 fiches générées.",
       image: "/images/opengraph-edufiche.png",
       link: "https://edu-fiche.fr",
+      github: "https://github.com/Moumouuu/edu-fiche",
     },
     {
       name: "FeelWords",
@@ -16,6 +17,7 @@ export default function Projects() {
         "Une application collaborative de partage d'histoire avec un espaces d'écriture boosté par l'IA. Avec des fonctionnalités de partage, de lecture, de commentaires et de tournois pour les plus compétitifs.",
       image: "/images/feelwords.png",
       link: "https://feelwords.fr",
+      github: "https://github.com/feelwords/app.feelwords",
     },
     {
       name: "Jalla Mulhouse",
@@ -23,6 +25,7 @@ export default function Projects() {
         "Un site vitrine accompagné d'un espace administrateur, spécialiste du linge de maison depuis 2001.",
       image: "/images/jalla-mulhouse.png",
       link: "https://jalla-mulhouse.fr",
+      github: "https://github.com/Moumouuu/jalla-mulhouse",
     },
     {
       name: "Juiher Nature",
@@ -30,6 +33,7 @@ export default function Projects() {
         "Un site vitrine accompagné d'un espace administrateur, spécialisé dans l'élagage et l'abattage d'arbres.",
       image: "/images/juiher-nature.png",
       link: "https://juihernature.fr",
+      github: "https://github.com/Moumouuu/juiher-nature",
     },
     {
       name: "BookEazy",
@@ -37,6 +41,7 @@ export default function Projects() {
         "Une application qui permet aux entreprises de gérer leurs rendez-vous, et d'obtenir des statistiques sur leur activité et leurs clients.",
       image: "/images/bookeazy.png",
       link: "https://bookeazy.fr",
+      github: "https://github.com/Moumouuu/book-easy",
     },
   ];
   return (
@@ -53,11 +58,18 @@ export default function Projects() {
                 <p>{project.description}</p>
               </div>
 
-              <Button>
-                <a href={project.link} target="_blank">
-                  Visit
-                </a>
-              </Button>
+              <div className="flex items-center w-full justify-around">
+                <Button>
+                  <a href={project.link} target="_blank">
+                    Voir le site
+                  </a>
+                </Button>
+                <Button>
+                  <a href={project.github} target="_blank">
+                    GitHub
+                  </a>
+                </Button>
+              </div>
             </ImageCard>
           </div>
         ))}

@@ -17,10 +17,10 @@ export default function Header() {
           Demander un devis
         </Button>
       </div>
-      <div className="absolute bottom-20 left-32 w-20 h-20 ">
+      <div className="absolute bottom-10 left-8 lg:bottom-20 lg:left-32 w-20 h-20 ">
         <Star3 />
       </div>
-      <div className="absolute top-20 right-32 w-20 h-20 ">
+      <div className="absolute top-10 right-10 lg:top-20 lg:right-32 w-20 h-20 ">
         <Star2 />
       </div>
     </header>

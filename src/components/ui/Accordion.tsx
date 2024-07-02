@@ -27,7 +27,7 @@ export default function Accordion({ question, answer, className }: Props) {
   return (
     <div
       data-state={showContent ? "open" : "closed"}
-      className="w-auto lg:w-[500px] group rounded-base border-2 border-border dark:border-darkBorder shadow-light dark:shadow-dark"
+      className="w-full lg:w-[500px] group rounded-base border-2 border-border dark:border-darkBorder shadow-light dark:shadow-dark"
     >
       <button
         role="button"

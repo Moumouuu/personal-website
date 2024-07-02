@@ -106,12 +106,12 @@ export default function Features() {
 
   const features = [
     {
-      title: "Développement sur mesure",
-      text: "Le développement est entièrement personnalisé pour répondre à vos besoins. Nous utilisons les dernières technologies pour garantir un site rapide et performant.",
+      title: "Un développeurs à votre service !",
+      text: "Je suis un développeurs qui a suivis une formation en développement web et je suis passionné par mon métier. Je met mon expertise à votre service pour vous accompagner dans la création de votre site internet. C'est pourquoi il n'y a pas de limite à ce que je peux faire pour vous !",
     },
     {
-      title: "Des développeurs à votre service !",
-      text: "Nous sommes des développeurs qui avont suivis une formation en développement web et nous sommes passionnés par notre métier. Nous mettons notre expertise à votre service pour vous accompagner dans la création de votre site internet. C'est pourquoi il n'y a pas de limite à ce que nous pouvons faire pour vous !",
+      title: "Développement sur mesure",
+      text: "Le développement est entièrement personnalisé pour répondre à vos besoins. Nous utilisons les dernières technologies pour garantir un site rapide et performant.",
     },
     {
       title: "Design moderne et épuré",
@@ -126,16 +126,8 @@ export default function Features() {
       text: "Le site est responsive et s'adapte à tous les écrans pour offrir une expérience utilisateur optimale sur mobile",
     },
     {
-      title: "Sécurisé et fiable",
-      text: "Le site est sécurisé et fiable pour protéger vos données et celles de vos utilisateurs.",
-    },
-    {
       title: "Rapide et performant",
       text: "Le site est rapide et performant pour offrir une expérience utilisateur optimale et augmenter le taux de conversion.",
-    },
-    {
-      title: "Support technique",
-      text: "Nous vous accompagnons après la mise en ligne pour répondre à vos questions et vous aider à gérer votre site.",
     },
   ];
 
@@ -146,27 +138,44 @@ export default function Features() {
           Notre expertise et nos engagements
         </h2>
 
-        <div className="mx-auto grid w-container max-w-full grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 w-full p-3">
           {features.map((feature, i) => {
             const Icon = icons[i];
+            let gridClass = "";
+
+            if (i === 0) {
+              gridClass = "md:row-span-2";
+            } else if (i === 1) {
+              gridClass = "md:col-span-2 md:col-start-2 md:row-start-1";
+            } else if (i === 2) {
+              gridClass = "md:col-start-2 md:row-start-2";
+            } else if (i === 3) {
+              gridClass = "md:col-start-3 md:row-start-2";
+            } else if (i === 4) {
+              gridClass = "md:col-span-2 md:col-start-1 md:row-start-3";
+            } else if (i === 5) {
+              gridClass = "md:col-start-3 md:row-start-3";
+            }
 
             return (
               <div
                 className={cn(
                   i % 2 === 0 ? "bg-darkBg" : "bg-main",
+                  gridClass,
                   "text-white border-darkBorder shadow-light dark:shadow-dark flex flex-col gap-3 rounded-base border-2 p-5"
                 )}
                 key={i}
               >
                 <Icon />
-
                 <h4 className="mt-2 text-xl font-heading">{feature.title}</h4>
                 <p>{feature.text}</p>
               </div>
             );
           })}
         </div>
-        <Button className="mx-auto mt-14">Demander un devis</Button>
+        <Button className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl mx-auto">
+          Demander un devis
+        </Button>
       </section>
     </div>
   );

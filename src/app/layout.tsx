@@ -1,3 +1,4 @@
+import Footer from "@/components/pages/Footer";
 import Navigation from "@/components/pages/Navigation";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className + "relative"}>
         <Navigation />
         {children}
+        <Footer />
       </body>
       <Script
         async

@@ -12,7 +12,7 @@ export default function LastCTA() {
           personnalisé.
         </p>
         <Button className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl">
-          Contactez-moi
+          Demander un devis
         </Button>
       </div>
     </header>

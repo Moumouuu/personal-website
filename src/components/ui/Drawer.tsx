@@ -29,7 +29,7 @@ export default function Drawer({ active, setActive, children }: Props) {
   if (!active) return null;
 
   return ReactDom.createPortal(
-    <div
+    <nav
       role="dialog"
       aria-modal="true"
       data-visible={isVisible ? "true" : "false"}
@@ -42,7 +42,7 @@ export default function Drawer({ active, setActive, children }: Props) {
       >
         {children}
       </div>
-    </div>,
+    </nav>,
     document.getElementById("drawer") as HTMLElement
   );
 }
