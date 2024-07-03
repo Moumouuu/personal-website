@@ -14,8 +14,12 @@ interface Link {
 export default function Navigation() {
   const links = [
     { href: "/", text: "Accueil", image: "/images/accueil.jpeg" },
-    { href: "/services", text: "Services", image: "/images/services.webp" },
-    { href: "/story", text: "Notre histoire", image: "/images/story.webp" },
+    {
+      href: "/services",
+      text: "Nos services",
+      image: "/images/services.webp",
+    },
+    { href: "/story", text: "Mon histoire", image: "/images/story.webp" },
     { href: "/portfolio", text: "Portfolio", image: "/images/portfolio.webp" },
   ];
   const [isDrawerActive, setIsDrawerActive] = useState(false);
